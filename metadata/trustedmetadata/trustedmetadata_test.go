@@ -24,11 +24,11 @@ import (
 	"testing"
 	"time"
 
-	"github.com/sigstore/sigstore/pkg/cryptoutils"
-	"github.com/sigstore/sigstore/pkg/signature"
+	"github.com/franchb/go-tuf/v2/internal/testutils"
+	"github.com/franchb/go-tuf/v2/metadata"
+	"github.com/franchb/sigstore/pkg/cryptoutils"
+	"github.com/franchb/sigstore/pkg/signature"
 	"github.com/stretchr/testify/assert"
-	"github.com/theupdateframework/go-tuf/v2/internal/testutils"
-	"github.com/theupdateframework/go-tuf/v2/metadata"
 )
 
 var allRoles map[string][]byte
@@ -286,7 +286,7 @@ func TestTopLevelMetadataWithInvalidJSON(t *testing.T) {
 	trustedSet, err := New(allRoles[metadata.ROOT])
 	assert.NoError(t, err)
 
-	//TIMESTAMP
+	// TIMESTAMP
 	// timestamp is not json
 	_, err = trustedSet.UpdateTimestamp([]byte(""))
 	assert.ErrorContains(t, err, "unexpected end of JSON input")

@@ -26,10 +26,10 @@ import (
 	"os"
 	"path/filepath"
 
+	"github.com/franchb/go-tuf/v2/metadata"
+	"github.com/franchb/go-tuf/v2/metadata/trustedmetadata"
 	"github.com/go-logr/stdr"
 	"github.com/spf13/cobra"
-	"github.com/theupdateframework/go-tuf/v2/metadata"
-	"github.com/theupdateframework/go-tuf/v2/metadata/trustedmetadata"
 )
 
 var rootPath string

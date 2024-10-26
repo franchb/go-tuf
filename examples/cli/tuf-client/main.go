@@ -18,7 +18,7 @@
 package main
 
 import (
-	tufclient "github.com/theupdateframework/go-tuf/v2/examples/cli/tuf-client/cmd"
+	tufclient "github.com/franchb/go-tuf/v2/examples/cli/tuf-client/cmd"
 )
 
 func main() {

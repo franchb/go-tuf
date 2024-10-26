@@ -25,13 +25,13 @@ import (
 	"testing"
 	"time"
 
-	"github.com/sigstore/sigstore/pkg/signature"
+	"github.com/franchb/sigstore/pkg/signature"
 	"github.com/stretchr/testify/assert"
 
-	"github.com/theupdateframework/go-tuf/v2/internal/testutils"
-	"github.com/theupdateframework/go-tuf/v2/internal/testutils/simulator"
-	"github.com/theupdateframework/go-tuf/v2/metadata"
-	"github.com/theupdateframework/go-tuf/v2/metadata/config"
+	"github.com/franchb/go-tuf/v2/internal/testutils"
+	"github.com/franchb/go-tuf/v2/internal/testutils/simulator"
+	"github.com/franchb/go-tuf/v2/metadata"
+	"github.com/franchb/go-tuf/v2/metadata/config"
 )
 
 func TestMain(m *testing.M) {
@@ -624,7 +624,7 @@ func TestNewTimestampExpired(t *testing.T) {
 }
 
 func TestNewTimestampFastForwardRecovery(t *testing.T) {
-	//Test timestamp fast-forward recovery using key rotation.
+	// Test timestamp fast-forward recovery using key rotation.
 
 	// The timestamp recovery is made by the following steps
 	//   - Remove the timestamp key
@@ -889,7 +889,7 @@ func TestComputeMetafileHashesLength(t *testing.T) {
 }
 
 func TestNewTargetsFastForwardRecovery(t *testing.T) {
-	//Test targets fast-forward recovery using key rotation.
+	// Test targets fast-forward recovery using key rotation.
 
 	// The targets recovery is made by issuing new Snapshot keys, by following
 	// steps:
