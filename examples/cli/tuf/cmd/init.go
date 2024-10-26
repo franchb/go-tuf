@@ -22,9 +22,9 @@ import (
 	stdlog "log"
 	"os"
 
+	"github.com/franchb/go-tuf/v2/metadata"
 	"github.com/go-logr/stdr"
 	"github.com/spf13/cobra"
-	"github.com/theupdateframework/go-tuf/v2/metadata"
 )
 
 var initCmd = &cobra.Command{

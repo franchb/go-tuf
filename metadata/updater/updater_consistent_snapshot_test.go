@@ -22,8 +22,8 @@ import (
 
 	"github.com/stretchr/testify/assert"
 
-	"github.com/theupdateframework/go-tuf/v2/internal/testutils/simulator"
-	"github.com/theupdateframework/go-tuf/v2/metadata"
+	"github.com/franchb/go-tuf/v2/internal/testutils/simulator"
+	"github.com/franchb/go-tuf/v2/metadata"
 )
 
 func TestTopLevelRolesUpdateWithConsistentSnapshotDisabled(t *testing.T) {

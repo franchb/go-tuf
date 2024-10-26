@@ -64,9 +64,9 @@ import (
 	"strings"
 	"time"
 
-	"github.com/sigstore/sigstore/pkg/signature"
-	"github.com/theupdateframework/go-tuf/v2/metadata"
-	"github.com/theupdateframework/go-tuf/v2/metadata/fetcher"
+	"github.com/franchb/go-tuf/v2/metadata"
+	"github.com/franchb/go-tuf/v2/metadata/fetcher"
+	"github.com/franchb/sigstore/pkg/signature"
 )
 
 var SPEC_VER = "." + metadata.SPECIFICATION_VERSION

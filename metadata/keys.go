@@ -27,8 +27,8 @@ import (
 	"encoding/hex"
 	"fmt"
 
+	"github.com/franchb/sigstore/pkg/cryptoutils"
 	"github.com/secure-systems-lab/go-securesystemslib/cjson"
-	"github.com/sigstore/sigstore/pkg/cryptoutils"
 )
 
 const (
@@ -54,7 +54,7 @@ func (k *Key) ToPublicKey() (crypto.PublicKey, error) {
 		if !ok {
 			return nil, fmt.Errorf("invalid rsa public key")
 		}
-		// done for verification - ref. https://github.com/theupdateframework/go-tuf/pull/357
+		// done for verification - ref. https://github.com/franchb/go-tuf/pull/357
 		if _, err := x509.MarshalPKIXPublicKey(rsaKey); err != nil {
 			return nil, err
 		}
@@ -68,7 +68,7 @@ func (k *Key) ToPublicKey() (crypto.PublicKey, error) {
 		if !ok {
 			return nil, fmt.Errorf("invalid ecdsa public key")
 		}
-		// done for verification - ref. https://github.com/theupdateframework/go-tuf/pull/357
+		// done for verification - ref. https://github.com/franchb/go-tuf/pull/357
 		if _, err := x509.MarshalPKIXPublicKey(ecdsaKey); err != nil {
 			return nil, err
 		}
@@ -79,7 +79,7 @@ func (k *Key) ToPublicKey() (crypto.PublicKey, error) {
 			return nil, err
 		}
 		ed25519Key := ed25519.PublicKey(publicKey)
-		// done for verification - ref. https://github.com/theupdateframework/go-tuf/pull/357
+		// done for verification - ref. https://github.com/franchb/go-tuf/pull/357
 		if _, err := x509.MarshalPKIXPublicKey(ed25519Key); err != nil {
 			return nil, err
 		}

@@ -23,8 +23,8 @@ import (
 	"path/filepath"
 	"testing"
 
+	"github.com/franchb/go-tuf/v2/metadata/fetcher"
 	"github.com/stretchr/testify/assert"
-	"github.com/theupdateframework/go-tuf/v2/metadata/fetcher"
 )
 
 func TestNewUpdaterConfig(t *testing.T) {

@@ -31,10 +31,10 @@ import (
 	"testing"
 	"time"
 
-	"github.com/sigstore/sigstore/pkg/cryptoutils"
-	"github.com/sigstore/sigstore/pkg/signature"
+	"github.com/franchb/go-tuf/v2/internal/testutils"
+	"github.com/franchb/sigstore/pkg/cryptoutils"
+	"github.com/franchb/sigstore/pkg/signature"
 	"github.com/stretchr/testify/assert"
-	"github.com/theupdateframework/go-tuf/v2/internal/testutils"
 )
 
 func TestMain(m *testing.M) {
@@ -726,7 +726,7 @@ func TestTargetsKeyAPI(t *testing.T) {
 	// Remove delegations as a whole
 	targets.Signed.Delegations = nil
 
-	//Test that calling add_key and revoke_key throws an error
+	// Test that calling add_key and revoke_key throws an error
 	// and that delegations is still None after each of the api calls
 	err = targets.Signed.AddKey(key, "role1")
 	assert.ErrorIs(t, err, &ErrValue{"delegated role role1 doesn't exist"})

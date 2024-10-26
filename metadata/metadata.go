@@ -38,8 +38,8 @@ import (
 	"strings"
 	"time"
 
+	"github.com/franchb/sigstore/pkg/signature"
 	"github.com/secure-systems-lab/go-securesystemslib/cjson"
-	"github.com/sigstore/sigstore/pkg/signature"
 )
 
 // Root return new metadata instance of type Root
@@ -562,7 +562,7 @@ func isTargetInPathPattern(targetpath string, pathpattern string) bool {
 
 // GetRolesForTarget return the names and terminating status of all
 // delegated roles who are responsible for targetFilepath
-// Note the result should be an ordered list, ref. https://github.com/theupdateframework/go-tuf/security/advisories/GHSA-4f8r-qqr9-fq8j
+// Note the result should be an ordered list, ref. https://github.com/franchb/go-tuf/security/advisories/GHSA-4f8r-qqr9-fq8j
 func (role *Delegations) GetRolesForTarget(targetFilepath string) []RoleResult {
 	var res []RoleResult
 	// Standard delegations

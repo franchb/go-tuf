@@ -24,9 +24,9 @@ import (
 	"path/filepath"
 	"slices"
 
-	"github.com/theupdateframework/go-tuf/v2/metadata"
-	"github.com/theupdateframework/go-tuf/v2/metadata/config"
-	"github.com/theupdateframework/go-tuf/v2/metadata/updater"
+	"github.com/franchb/go-tuf/v2/metadata"
+	"github.com/franchb/go-tuf/v2/metadata/config"
+	"github.com/franchb/go-tuf/v2/metadata/updater"
 )
 
 // The following represent the map file described in TAP 4
